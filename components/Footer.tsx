@@ -4,17 +4,18 @@ import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
+
 const Footer = () => {
   return (
-    <footer className="hover:scale-95 text-gray-700 bg-orange-100 bg-opacity-20 mt-[20vh] mx-5 border rounded-md border-none">
+    <footer className="transform duration-500 ease-in-out border-t border-orange-950 hover:scale-95 text-gray-700 bg-orange-50 bg-opacity-20 mt-[20vh] mx-5 rounded-md">
       <div className="container mx-auto px-5 py-16 flex flex-wrap md:justify-between justify-center">
         {/* Logo and Description */}
         <div className="w-full md:w-1/4 text-center md:text-left mb-8 md:mb-0">
-        <Link href="/" className="text-gray-900 font-bold text-2xl transform ">
-        <span className="px-2 font-mono text-orange-950 shadow-[3px_2px_0px_#6F2C1F]">
-            Echoed Words
-        </span>
-        </Link>
+          <Link href="/" className="text-gray-900 font-bold text-2xl transform ">
+            <span className="px-2 font-mono text-orange-950 shadow-[3px_2px_0px_#6F2C1F]">
+              Echoed Words
+            </span>
+          </Link>
 
           <p className="mt-4 text-gray-500 text-sm">
             Discover, create, and share amazing experiences.
@@ -74,9 +75,9 @@ const Footer = () => {
       {/* Bottom Section */}
       <div className="bg-orange-50 py-4">
         <div className="container mx-auto text-center">
-          <p className="text-sm text-gray-700">
-            &copy; {new Date().getFullYear()} All rights reserved. Built with <span aria-label="pen emoji">💻</span> by Tizazab.
-          </p>
+        <p className="text-sm text-gray-700 text-center bg-">
+            &copy; {new Date().getFullYear()} All rights reserved. Built by <span className="font-semibold">Tizazab Ayana</span>.
+        </p>
         </div>
       </div>
     </footer>
