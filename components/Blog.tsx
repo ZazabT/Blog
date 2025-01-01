@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useState, useEffect } from "react";
 import BlogCard from "./BlogCard";
 import axios from "axios";
@@ -31,7 +31,7 @@ const BlogList = () => {
   }, []); 
 
   return (
-    <div className="bg-gray-100 p-4">
+    <div className="p-4">
       {isLoading && <p className="text-xl text-center text-blue-600 font-semibold">Loading...</p>}
 
       {error && (
@@ -40,24 +40,20 @@ const BlogList = () => {
         </p>
       )}
 
-
-      
-        {/* Ensure blogs is an array before mapping */}
-        {Array.isArray(blogs) && blogs.length > 0 ? (
-          <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-         { blogs.map((blog) => (
+      {/* Ensure blogs is an array before mapping */}
+      {Array.isArray(blogs) && blogs.length > 0 ? (
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+          {blogs.map((blog) => (
             <BlogCard key={blog.id || blog.title} {...blog} />
-          ))
-          }
-          </section>
-        ) : (
-          !isLoading && (
-            <p className="text-2xl text-center text-gray-700 font-bold p-4 rounded">
-              No blogs available at the moment. Please check back later!
-            </p>
-          )
-        )}
-      
+          ))}
+        </section>
+      ) : (
+        !isLoading && (
+          <p className="text-2xl text-center text-gray-700 font-bold p-4 rounded">
+            No blogs available at the moment. Please check back later!
+          </p>
+        )
+      )}
     </div>
   );
 };
