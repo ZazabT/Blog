@@ -28,7 +28,7 @@ const items = [
 
 export function AppSidebar() {
   return (
-    <div className="flex min-h-screen">
+    <div className="flex  min-h-screen">
       {/* Sidebar */}
       <nav className="w-64 flex-shrink-0 bg-gray-900 text-white shadow-lg">
         <div className="flex flex-col h-full">

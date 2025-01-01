@@ -2,6 +2,7 @@ import { connectToDatabase } from "@/lib/config/db";
 import { NextResponse } from "next/server";
 import Blog from "@/lib/models/blog";
 import { writeFile } from "fs/promises";
+import { ObjectId } from 'mongodb'; // If using MongoDB
 // connect to db
 const connect =  async () => {
     await connectToDatabase();
@@ -28,11 +29,8 @@ export async function GET(req: Request) {
     }
   }
 
-// get a blog by id
-// export async function GET_BY_ID(req: Request) {
 
-//     return NextResponse.json({ message: "Hello" });         
-// }
+            
 
 // create a blog
 export async function POST(req: Request) {

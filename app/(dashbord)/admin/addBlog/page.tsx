@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; 
 export default function AddBlog() {
   const [formData, setFormData] = useState({
     title: "",
@@ -71,6 +73,14 @@ export default function AddBlog() {
 
       if (response.ok) {
         setMessage("Blog added successfully!");
+        toast.success("Your blog was added successfully!", {
+          autoClose: 5000, // Close after 5 seconds
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
         setFormData({
           title: "",
           description: "",
@@ -97,6 +107,7 @@ export default function AddBlog() {
 
   return (
     <div className="p-6 max-w-2xl mx-auto flex-1 pt-5 sm:pt-12 sm:pl-15">
+      <ToastContainer />
       <h1 className="text-3xl font-bold mb-6 text-center">Add Blog</h1>
 
       {message && (
@@ -162,6 +173,7 @@ export default function AddBlog() {
             <option value="technology">Technology</option>
             <option value="lifestyle">Lifestyle</option>
             <option value="funfact">Fun Fact</option>
+            <option value="startup">Startup</option>
           </select>
         </div>
 

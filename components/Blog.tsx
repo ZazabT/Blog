@@ -42,7 +42,7 @@ const BlogList = () => {
 
       {/* Ensure blogs is an array before mapping */}
       {Array.isArray(blogs) && blogs.length > 0 ? (
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
           {blogs.map((blog) => (
             <BlogCard key={blog.id || blog.title} {...blog} />
           ))}

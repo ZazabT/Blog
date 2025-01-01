@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="font-[var(--font-geist-sans)] flex justify-between items-center px-6 py-6 bg-transparent w-full">
       { /* Logo */ }
         <div className=''>
-        <h1 className="sm:text-5xl font-extrabold bg-white border border-t-2 border-black text-black font-mono transform rotate-[-3deg] pl-8 text-3xl duration-300 shadow-[6px_18px_1px_#6F2C1F]">
+        <h1 className="hover:rotate-[2deg] sm:text-5xl font-extrabold bg-white border border-t-2 border-black text-black font-mono transform rotate-[-3deg] pl-8 text-3xl duration-300 shadow-[6px_18px_1px_#6F2C1F]">
             Echoed <span className="text-orange-950 italic transform rotate-[-10deg]">Words</span>
             <span className="text-orange-300 duration-300">.</span>
         </h1>
@@ -31,7 +31,7 @@ const Navbar = () => {
         {/* Subscribe Button */}
         <div className="flex w-full max-w-sm items-center ">
             <Input type="email" placeholder="Email" className='border rounded-none' />
-            <Button type="submit" className='border rounded-none bg-orange-950' >Subscribe</Button>
+            <Button type="submit" className='border rounded-none hover:bg-orange-900 bg-orange-950' >Subscribe</Button>
         </div>
       </div>
     </nav>
