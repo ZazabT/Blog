@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import BlogCard from "./BlogCard";
 import axios from "axios";
+
 const BlogList = () => {
   const [blogs, setBlogs] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -27,24 +28,36 @@ const BlogList = () => {
     };
 
     fetchBlogs(); // Call the fetch function when the component mounts
-  }, []); // Empty array to ensure it runs once
+  }, []); 
 
   return (
-    <div className="bg-red-300">
-      {isLoading && <p>Loading...</p>}
-      {error && <p className="text-red-500 ">{error}</p>}
+    <div className="bg-gray-100 p-4">
+      {isLoading && <p className="text-xl text-center text-blue-600 font-semibold">Loading...</p>}
 
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      {error && (
+        <p className="text-2xl text-center text-red-600 font-bold bg-red-100 p-4 rounded">
+          {error}
+        </p>
+      )}
+
+
+      
         {/* Ensure blogs is an array before mapping */}
         {Array.isArray(blogs) && blogs.length > 0 ? (
-          blogs.map((blog) => (
+          <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+         { blogs.map((blog) => (
             <BlogCard key={blog.id || blog.title} {...blog} />
           ))
+          }
+          </section>
         ) : (
-          <p className="bg-purple-400">No blogs found.</p>
+          !isLoading && (
+            <p className="text-2xl text-center text-gray-700 font-bold p-4 rounded">
+              No blogs available at the moment. Please check back later!
+            </p>
+          )
         )}
-      </section>
-
+      
     </div>
   );
 };

@@ -15,7 +15,7 @@ const blogSchema = new mongoose.Schema({
         category: {
             type: String,
             enum: ['coding', 'technology', 'lifestyle', 'funfact'],
-            required: true,
+            required: true
           },
 
         image: {

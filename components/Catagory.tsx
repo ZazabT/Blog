@@ -14,13 +14,13 @@ const Category = () => {
 
       {/* Category Buttons */}
       <div className="flex flex-wrap gap-4 justify-center items-center">
-        <Button className="px-6 py-2 border  rounded-none hover:bg-gray-100 transition hover:text-black">
+        <Button className="px-6 py-2 border rounded-none hover:bg-gray-100 transition hover:text-black">
           All
         </Button>
-        <Button className="px-6 py-2 border   rounded-none hover:bg-gray-100 transition hover:text-black">
+        <Button className="px-6 py-2 border rounded-none hover:bg-gray-100 transition hover:text-black">
           Lifestyle
         </Button>
-        <Button className="px-6 py-2 border  rounded-none hover:bg-gray-100 transition hover:text-black">
+        <Button className="px-6 py-2 border rounded-none hover:bg-gray-100 transition hover:text-black">
           Technology
         </Button>
         <Button className="px-6 py-2 border rounded-none hover:bg-gray-100 transition hover:text-black">
