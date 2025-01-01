@@ -14,19 +14,19 @@ const Category = () => {
 
       {/* Category Buttons */}
       <div className="flex flex-wrap gap-4 justify-center items-center">
-        <Button className="px-6 py-2 border rounded-none hover:bg-gray-100 transition hover:text-black">
+        <Button className="px-6 py-2 border rounded-none bg-orange-950 hover:bg-gray-100 transition hover:text-orange-950">
           All
         </Button>
-        <Button className="px-6 py-2 border rounded-none hover:bg-gray-100 transition hover:text-black">
+        <Button className="px-6 py-2 border rounded-none bg-orange-950 hover:bg-gray-100 transition hover:text-orange-950">
           Lifestyle
         </Button>
-        <Button className="px-6 py-2 border rounded-none hover:bg-gray-100 transition hover:text-black">
+        <Button className="px-6 py-2 border rounded-none bg-orange-950 hover:bg-gray-100 transition hover:text-orange-950">
           Technology
         </Button>
-        <Button className="px-6 py-2 border rounded-none hover:bg-gray-100 transition hover:text-black">
+        <Button className="px-6 py-2 border rounded-none bg-orange-950 hover:bg-gray-100 transition hover:text-orange-950">
           Startup
         </Button>
-        <Button className="px-6 py-2 border rounded-none hover:bg-gray-100 transition hover:text-black">
+        <Button className="px-6 py-2 border rounded-none bg-orange-950 hover:bg-gray-100 transition hover:text-orange-950">
           Coding
         </Button>
       </div>

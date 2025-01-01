@@ -24,11 +24,12 @@ const Hero = () => {
         </div>
 
         {/* Header Title and Subtitle */}
-        <div className="max-w-2xl text-center md:text-left">
-          <h1 className="text-5xl  py-6 uppercase font-[Dancing_Script] tracking-wide text-gray-900">
+        {/* shadow-[4px_4px_1px_#6F2C1F] */}
+        <div className="max-w-2xl text-start md:text-left bg-orange-50 bg-opacity-80 px-3 border border-white rounded-xl py-1 rotate-2">
+          <h1 className="text-5xl  py-6 uppercase font-bold tracking-wide text-orange-950">
             Innovating Tomorrow, One Idea at a Time
           </h1>
-          <h3 className="mt-4 text-xl font-light font-[Lato] lowercase text-gray-700">
+          <h3 className="mt-4 text-xl font-extralight font-[Lato] lowercase text-gray-700">
             Dive into the world of groundbreaking technologies, startup journeys, coding secrets,
             lifestyle hacks, and fascinating fun facts — where innovation meets inspiration.
           </h3>
