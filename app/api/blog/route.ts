@@ -18,6 +18,7 @@ export async function GET(req: Request) {
       const blogs = await Blog.find();
       
       // Return a success response with the blogs data
+      console.log(blogs)
       return NextResponse.json({ success: true, data: blogs }, { status: 200 });
     } catch (error) {
       console.error('Error fetching blogs:', error);

@@ -15,7 +15,7 @@ const Hero = () => {
       {/* Social Media and Header Section */}
       <div className="flex flex-col md:flex-row justify-between my-5 items-center">
         {/* Social Media Icons */}
-        <div className="flex sm:flex-col sm:gap-4 gap-8">
+        <div className="flex md:flex-col sm:gap-4 gap-8 m-5 md:m-0">
           <Facebook size={22} className="hover:text-blue-800" />
           <X size={22} className="hover:text-blue-700" />
           <Instagram size={22} className="hover:text-pink-700" />
@@ -35,6 +35,7 @@ const Hero = () => {
           </h3>
         </div>
       </div>
+      
 
       {/* Image Section */}
       <div className="w-full flex flex-wrap md:flex-nowrap gap-2">

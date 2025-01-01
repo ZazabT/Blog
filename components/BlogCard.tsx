@@ -6,7 +6,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react"; // Importing icon from lucide-react
 
 interface BlogCardProps {
-  id: number;
+  _id: number;
   title: string;
   description: string;
   category: string;
@@ -15,7 +15,7 @@ interface BlogCardProps {
 }
 
 const BlogCard: React.FC<BlogCardProps> = ({
-  id,
+  _id,
   title,
   description,
   category,
@@ -37,13 +37,13 @@ const BlogCard: React.FC<BlogCardProps> = ({
         </div>
 
         {/* Content Section */}
-        <div className="p-4 flex flex-col justify-between">
+        <div className="px-4 py-2 flex flex-col justify-between">
           {/* Category & Date */}
           <div className="mb-3 flex items-center justify-between">
             <span className="text-xs font-medium text-orange-900 uppercase bg-orange-100 px-2 py-1 rounded-full">
               {category}
             </span>
-            <span className="text-xs text-gray-400">
+            <span className="text-xs text-gray-500">
               {new Date(createdAt).toLocaleDateString('en-US', {
                 weekday: 'short',
                 month: 'short', 
@@ -65,7 +65,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
           </p>
 
           {/* Read More Button */}
-          <Link href={`/blog/${id}`}>
+          <Link href={`/blog/${_id}`}>
             <button
               className="flex items-center gap-2 text-xs font-bold uppercase text-orange-900 hover:text-white hover:bg-orange-900 transition-all rounded-lg py-2 px-4 mt-auto"
               type="button"
@@ -75,6 +75,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
             </button>
           </Link>
         </div>
+        
       </div>
     </div>
   );
