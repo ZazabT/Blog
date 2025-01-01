@@ -10,7 +10,7 @@ export default function Layout({ children }) {
       {/* Main Content Area */}
       <main className="w-full h-full">
         {/* Header */}
-        <header className="text-white bg-black sticky left-auto top-0 right-0 px-2 py-2">
+        <header className="text-white bg-gray-800 sticky left-auto top-0 right-0 px-2 py-2">
           <div className="h-12 px-6 flex relative items-center justify-end">
             {/* Notification Icon */}
             <button className="flex mx-4 text-white hover:text-gray-200 focus:outline-none">
