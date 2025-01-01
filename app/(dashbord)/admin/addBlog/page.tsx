@@ -96,7 +96,7 @@ export default function AddBlog() {
   }, []);
 
   return (
-    <div className="p-6 max-w-2xl mx-auto">
+    <div className="p-6 max-w-2xl mx-auto flex-1 pt-5 sm:pt-12 sm:pl-15">
       <h1 className="text-3xl font-bold mb-6 text-center">Add Blog</h1>
 
       {message && (
