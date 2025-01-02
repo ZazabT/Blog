@@ -78,16 +78,3 @@ export async function POST(req: Request) {
     }
   }
 
-
-// delete a blog
-// export async function DELETE(req : Request) {
-    
-//     return NextResponse.json({ message: "Hello" });         
-// }
-
-
-// update a blog
-// export async function PUT(req) {
-    
-//     return NextResponse.json({ message: "Hello" });         
-// }

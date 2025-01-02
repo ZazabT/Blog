@@ -34,7 +34,19 @@ export async function POST(req) {
     }
 }
 
-// get all subs 
-export async function GET(req:Request) {
-    
+// Get All Subscribers
+export async function GET(req: Request) {
+    try {
+        // Connect to the database
+        await connect();
+
+        // Fetch all subscribers from the database
+        const subs = await Subscriber.find();  // Await the result here
+
+        return NextResponse.json({ success: true, message: 'Successfully fetched subscribers', subscribers: subs }, { status: 200 });
+
+    } catch (error) {
+        console.error('Error during getting subscribers: ', error);
+        return NextResponse.json({ success: false, message: 'Failed fetching subscribers' }, { status: 500 });
+    }
 }
