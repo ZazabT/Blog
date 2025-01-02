@@ -37,7 +37,7 @@ export default function Contact() {
                     id="firstName"
                     name="firstName"
                     required
-                    className="w-full border-gray-300 rounded-lg shadow-sm focus:ring-orange-500 focus:border-orange-500 py-3 px-4 text-gray-700 placeholder-gray-400"
+                    className="w-full border-gray-300 rounded-lg focus:ring-orange-200 focus:border-orange-200 py-3 px-4 text-gray-700 placeholder-gray-400"
                     placeholder="John"
                   />
                 </div>
@@ -54,7 +54,7 @@ export default function Contact() {
                     id="lastName"
                     name="lastName"
                     required
-                    className="w-full border-gray-300 rounded-lg shadow-sm focus:ring-orange-500 focus:border-orange-500 py-3 px-4 text-gray-700 placeholder-gray-400"
+                    className="w-full border-gray-300 rounded-lg shadow-sm focus:ring-orange-200 focus:border-orange-200 py-3 px-4 text-gray-700 placeholder-gray-400"
                     placeholder="Doe"
                   />
                 </div>
@@ -72,7 +72,7 @@ export default function Contact() {
                   id="email"
                   name="email"
                   required
-                  className="w-full border-gray-300 rounded-lg shadow-sm focus:ring-orange-500 focus:border-orange-500 py-3 px-4 text-gray-700 placeholder-gray-400"
+                  className="w-full border-gray-300 rounded-lg shadow-sm focus:ring-orange-200 focus:border-orange-200 py-3 px-4 text-gray-700 placeholder-gray-400"
                   placeholder="John@somting.com"
                 />
               </div>
@@ -88,7 +88,7 @@ export default function Contact() {
                   type="tel"
                   id="phone"
                   name="phone"
-                  className="w-full border-gray-300 rounded-lg shadow-sm focus:ring-orange-500 focus:border-orange-500 py-3 px-4 text-gray-700 placeholder-gray-400"
+                  className="w-full border-gray-300 rounded-lg shadow-sm focus:ring-orange-200 focus:border-orange-200 py-3 px-4 text-gray-700 placeholder-gray-400"
                   placeholder="+251 912 345 678"
                   pattern="\+?\d{1,4}\s?\d{3}\s?\d{3}\s?\d{3}"
                 />
@@ -105,7 +105,7 @@ export default function Contact() {
                   id="message"
                   name="message"
                   required
-                  className="w-full border border-gray-300 rounded-lg shadow-sm focus:ring-orange-500 focus:border-orange-500 py-3 px-4 text-gray-700 placeholder-gray-400"
+                  className="w-full border border-gray-300 rounded-lg shadow-sm focus:ring-orange-200 focus:border-orange-200 py-3 px-4 text-gray-700 placeholder-gray-400"
                   placeholder="Write your message here..."
                   rows="5"
                 ></textarea>
@@ -118,7 +118,7 @@ export default function Contact() {
                     type="checkbox"
                     id="suggestion"
                     name="suggestion"
-                    className="h-4 w-4 text-orange-500 border-gray-300 rounded focus:ring-orange-500"
+                    className="h-4 w-4 text-orange-500 border-gray-300 rounded focus:ring-orange-200"
                   />
                   <label
                     htmlFor="suggestion"
@@ -132,7 +132,7 @@ export default function Contact() {
                     type="checkbox"
                     id="feedback"
                     name="feedback"
-                    className="h-4 w-4 text-orange-500 border-gray-300 rounded focus:ring-orange-500"
+                    className="h-4 w-4 text-orange-500 border-gray-300 rounded focus:ring-orange-200"
                   />
                   <label
                     htmlFor="feedback"
@@ -146,7 +146,7 @@ export default function Contact() {
                     type="checkbox"
                     id="question"
                     name="question"
-                    className="h-4 w-4 text-orange-500 border-gray-300 rounded focus:ring-orange-500"
+                    className="h-4 w-4 text-orange-500 border-gray-300 rounded focus:ring-orange-200"
                   />
                   <label
                     htmlFor="question"
@@ -160,7 +160,7 @@ export default function Contact() {
                     type="checkbox"
                     id="sayhi"
                     name="sayhi"
-                    className="h-4 w-4 text-orange-500 border-gray-300 rounded focus:ring-orange-500"
+                    className="h-4 w-4 text-orange-500 border-gray-300 rounded focus:ring-orange-200"
                   />
                   <label
                     htmlFor="sayhi"
@@ -174,7 +174,7 @@ export default function Contact() {
                     type="checkbox"
                     id="complaint"
                     name="complaint"
-                    className="h-4 w-4 text-orange-500 border-gray-300 rounded focus:ring-orange-500"
+                    className="h-4 w-4 text-orange-500 border-gray-300 rounded focus:ring-orange-200"
                   />
                   <label
                     htmlFor="complaint"
@@ -188,7 +188,7 @@ export default function Contact() {
                     type="checkbox"
                     id="other"
                     name="other"
-                    className="h-4 w-4 text-orange-500 border-gray-300 rounded focus:ring-orange-500"
+                    className="h-4 w-4 text-orange-500 border-gray-300 rounded focus:ring-orange-200"
                   />
                   <label
                     htmlFor="other"

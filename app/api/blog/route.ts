@@ -2,7 +2,7 @@ import { connectToDatabase } from "@/lib/config/db";
 import { NextResponse } from "next/server";
 import Blog from "@/lib/models/blog";
 import { writeFile } from "fs/promises";
-import { ObjectId } from 'mongodb'; // If using MongoDB
+
 // connect to db
 const connect =  async () => {
     await connectToDatabase();
