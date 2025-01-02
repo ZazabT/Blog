@@ -29,10 +29,17 @@ const BlogList = () => {
 
     fetchBlogs(); // Call the fetch function when the component mounts
   }, []); 
+  
 
   return (
-    <div className="p-4">
-      {isLoading && <p className="text-xl text-center text-blue-600 font-semibold">Loading...</p>}
+    <div className="p-4 w-full">
+
+      {isLoading &&   
+        <div className="w-full items-center flex justify-center">
+          <div className="text-center w-16 h-16 border-4 border-t-4 border-gray-200 border-solid rounded-full animate-spin border-t-orange-900"></div>
+        </div>
+        
+        }
 
       {error && (
         <p className="text-2xl text-center text-red-600 font-bold bg-red-100 p-4 rounded">
@@ -48,7 +55,7 @@ const BlogList = () => {
           ))}
         </section>
       ) : (
-        !isLoading && (
+        !isLoading && error && (
           <p className="text-2xl text-center text-gray-700 font-bold p-4 rounded">
             No blogs available at the moment. Please check back later!
           </p>

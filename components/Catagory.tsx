@@ -6,8 +6,8 @@ const Category = () => {
     <section className="py-8">
       {/* Header Section */}
       <div className="text-center mb-6">
-        <h2 className="text-3xl font-bold text-gray-800 uppercase">Explore Categories</h2>
-        <p className="text-gray-600 mt-2">
+        <h2 className="text-2xl sm:text-4xl font-bold text-gray-800 uppercase">Explore Categories</h2>
+        <p className="text-gray-600 mt-3 text-sm sm:text-base">
           Discover blogs by category and dive into the topics that inspire you.
         </p>
       </div>

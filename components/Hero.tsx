@@ -25,7 +25,7 @@ const Hero = () => {
 
         {/* Header Title and Subtitle */}
         {/* shadow-[4px_4px_1px_#6F2C1F] */}
-        <div className="hover:rotate-[-2deg] transform duration-500 ease-in-out max-w-2xl text-start md:text-left bg-orange-50 bg-opacity-80 px-3 border border-white rounded-xl py-1 rotate-2">
+        <div className="shadow-[4px_4px_1px_#6F2C1F] hover:rotate-[-2deg] transform duration-500 ease-in-out max-w-2xl text-start md:text-left bg-orange-100 bg-opacity-50 px-3 border border-white rounded-xl py-1 rotate-2">
           <h1 className="text-5xl  py-6 uppercase font-bold tracking-wide text-orange-950">
             Innovating Tomorrow, One Idea at a Time
           </h1>

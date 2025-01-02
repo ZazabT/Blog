@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import Link from 'next/link';
 
 const Navbar = () => {
   return (
@@ -17,10 +18,12 @@ const Navbar = () => {
       {/* Nav Links */}
       <div className="hidden md:flex">
         <ul className="flex items-center gap-6 text-gray-700">
-          {["Home", "About", "Contact"].map((item, index) => (
+          {[{name: "Home" , href:'/'} , {name: "About" , href:'/about'} , {name: "Contact" , href:'/contact'} ].map((item, index) => (
             <li key={index} className="relative group text-base font-semibold cursor-pointer border-b-2 border-black hover:line-through duration-300 ease-in-out transform">
-              <span className="hover:text-gray-900">{item}</span>
-              <span className="absolute left-0  bottom-0 h-1 w-0 bg-orange-950 transition-all duration-500 group-hover:w-[80%]"></span>
+               <Link href={item.href}>
+               <span className="hover:text-gray-900">{item.name}</span>
+               <span className="absolute left-0  bottom-0 h-1 w-0 bg-orange-950 transition-all duration-500 group-hover:w-[80%]"></span>
+               </Link>
             </li>
           ))}
         </ul>
