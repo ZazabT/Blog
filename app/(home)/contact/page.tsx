@@ -7,14 +7,14 @@ import Link from "next/link";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen flex items-center justify-center px-6 py-12">
+    <div className="min-h-screen mt-10 flex items-center justify-center px-6 py-12 mx-auto">
       <div className="w-full max-w-7xl mx-auto overflow-hidden">
         {/* Header Section */}
         <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-4xl font-extrabold text-orange-900 mb-4">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-black mb-4">
             Talk to Us, We’re Listening!
           </h2>
-          <p className="text-base text-gray-600 mb-6 leading-relaxed">
+          <p className="text-sm sm:text-base text-gray-600 mb-6 leading-relaxed">
             Got questions, suggestions, or just want to say hi? Drop us a
             line, and we’ll get back to you in no time. Your feedback matters!
           </p>
@@ -22,7 +22,7 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Contact Form Section */}
-          <div className="p-8 mx-auto bg-white ">
+          <div className="p-8 mx-auto ">
             <form className="space-y-6">
               <div className="flex gap-4">
                 <div className="w-full">
@@ -112,7 +112,7 @@ export default function Contact() {
               </div>
 
               {/* Suggestions/Checkbox Section */}
-              <div className="grid grid-cols-2 gap-4 mt-2">
+              <div className="grid grid-cols-2 gap-2">
                 <div className="flex items-center">
                   <input
                     type="checkbox"
@@ -237,7 +237,7 @@ export default function Contact() {
             </div>
 
             {/* Call Information Section */}
-            <div className="space-y-4">
+            <div className="">
               <h3 className="text-2xl font-semibold text-black">Call Us</h3>
               <h4 className="text-sm text-gray-400">Call our team from 8 am to 5 pm</h4>
               <div className="my-4 space-y-2">
@@ -255,8 +255,8 @@ export default function Contact() {
             </div>
 
             {/* Location Section */}
-            <div className="space-y-4">
-              <p className="flex items-center gap-2 text-lg text-orange-200">
+            <div className="">
+              <p className="flex items-center gap-2 text-lg text-orange-800">
                 <MapPin className="text-xl" />
                 Ethiopia, AA Signal
               </p>

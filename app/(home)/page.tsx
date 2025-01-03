@@ -10,7 +10,7 @@ export default function Home() {
              <Hero/>
         </div>
 
-        <div className="max-w-7xl mx-auto mb-20 ">
+        <div className="max-w-7xl mx-auto mb-10 ">
           {/* Category */}
         <Catagory/>
         </div>
