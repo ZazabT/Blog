@@ -4,8 +4,16 @@ import { Send, Twitter, Instagram, Phone, MapPin } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useState , useEffect } from "react";
 
 export default function Contact() {
+
+  const [firstName , setFirstName] = useState('');
+  const [lastName , setLastName] = useState('');
+  const [email , setEmail] = useState('');
+  const [phoneNumber , setPhoneNumber] = useState(0);
+  const [message , setMessage] = useState('');
+
   return (
     <div className="min-h-screen mt-10 flex items-center justify-center px-6 py-12 mx-auto">
       <div className="w-full max-w-7xl mx-auto overflow-hidden">
@@ -36,6 +44,8 @@ export default function Contact() {
                     type="text"
                     id="firstName"
                     name="firstName"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
                     required
                     className="w-full border-gray-300 rounded-lg focus:ring-orange-200 focus:border-orange-200 py-3 px-4 text-gray-700 placeholder-gray-400"
                     placeholder="John"
@@ -54,6 +64,8 @@ export default function Contact() {
                     id="lastName"
                     name="lastName"
                     required
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
                     className="w-full border-gray-300 rounded-lg shadow-sm focus:ring-orange-200 focus:border-orange-200 py-3 px-4 text-gray-700 placeholder-gray-400"
                     placeholder="Doe"
                   />
@@ -72,6 +84,8 @@ export default function Contact() {
                   id="email"
                   name="email"
                   required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="w-full border-gray-300 rounded-lg shadow-sm focus:ring-orange-200 focus:border-orange-200 py-3 px-4 text-gray-700 placeholder-gray-400"
                   placeholder="John@somting.com"
                 />
