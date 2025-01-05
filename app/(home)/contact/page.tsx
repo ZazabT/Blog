@@ -2,11 +2,11 @@
 'use client'
 
 import React from "react";
-import { Send, Twitter, Instagram, Phone, MapPin } from "lucide-react";
+import { Send, Twitter, Instagram, PhoneCallIcon, MapPin } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { useState , useEffect } from "react";
+import { useState} from "react";
 
 export default function Contact() {
 
@@ -15,6 +15,23 @@ export default function Contact() {
   const [email , setEmail] = useState('');
   const [phoneNumber , setPhoneNumber] = useState(0);
   const [message , setMessage] = useState('');
+  const [checkboxState, setCheckboxState] = useState({
+    suggestion: false,
+    feedback: false,
+    question: false,
+    sayhi: false,
+    complaint: false,
+    other: false,
+  })
+
+
+  const handleCheckboxChange = (event) => {
+    const { name, checked } = event.target;
+    setCheckboxState((prevState) => ({
+      ...prevState,
+      [name]: checked,
+    }));
+  };
 
   return (
     <div className="min-h-screen mt-10 flex items-center justify-center px-6 py-12 mx-auto  max-w-5xl">
@@ -122,6 +139,8 @@ export default function Contact() {
                 <textarea
                   id="message"
                   name="message"
+                  value={message}
+                  onChange={(e)=>setMessage(e.target.value)}
                   required
                   className="w-full border border-gray-300 rounded-lg shadow-sm focus:ring-orange-200 focus:border-orange-200 py-3 px-4 text-gray-700 placeholder-gray-400"
                   placeholder="Write your message here..."
@@ -131,90 +150,21 @@ export default function Contact() {
 
               {/* Suggestions/Checkbox Section */}
               <div className="grid grid-cols-2 gap-2">
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="suggestion"
-                    name="suggestion"
-                    className="h-4 w-4 text-orange-500 border-gray-300 rounded focus:ring-orange-200"
-                  />
-                  <label
-                    htmlFor="suggestion"
-                    className="ml-2 text-sm text-gray-700"
-                  >
-                    Suggestion
-                  </label>
-                </div>
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="feedback"
-                    name="feedback"
-                    className="h-4 w-4 text-orange-500 border-gray-300 rounded focus:ring-orange-200"
-                  />
-                  <label
-                    htmlFor="feedback"
-                    className="ml-2 text-sm text-gray-700"
-                  >
-                    Feedback
-                  </label>
-                </div>
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="question"
-                    name="question"
-                    className="h-4 w-4 text-orange-500 border-gray-300 rounded focus:ring-orange-200"
-                  />
-                  <label
-                    htmlFor="question"
-                    className="ml-2 text-sm text-gray-700"
-                  >
-                    Question
-                  </label>
-                </div>
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="sayhi"
-                    name="sayhi"
-                    className="h-4 w-4 text-orange-500 border-gray-300 rounded focus:ring-orange-200"
-                  />
-                  <label
-                    htmlFor="sayhi"
-                    className="ml-2 text-sm text-gray-700"
-                  >
-                    Say Hi
-                  </label>
-                </div>
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="complaint"
-                    name="complaint"
-                    className="h-4 w-4 text-orange-500 border-gray-300 rounded focus:ring-orange-200"
-                  />
-                  <label
-                    htmlFor="complaint"
-                    className="ml-2 text-sm text-gray-700"
-                  >
-                    Complaint
-                  </label>
-                </div>
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="other"
-                    name="other"
-                    className="h-4 w-4 text-orange-500 border-gray-300 rounded focus:ring-orange-200"
-                  />
-                  <label
-                    htmlFor="other"
-                    className="ml-2 text-sm text-gray-700"
-                  >
-                    Other
-                  </label>
-                </div>
+                {Object.entries(checkboxState).map(([key, value]) => (
+                  <div key={key} className="flex items-center">
+                    <input
+                      type="checkbox"
+                      id={key}
+                      name={key}
+                      checked={value}
+                      onChange={handleCheckboxChange}
+                      className="h-4 w-4 text-orange-500 border-gray-300 rounded focus:ring-orange-200"
+                    />
+                    <label htmlFor={key} className="ml-2 text-sm text-gray-700 capitalize">
+                      {key}
+                    </label>
+                  </div>
+                ))}
               </div>
 
               {/* Submit Button */}
@@ -237,17 +187,17 @@ export default function Contact() {
               <h4 className="text-sm text-gray-400">Speak to our friendly team via message</h4>
               <div className="my-4 space-y-2">
                 {/* Telegram */}
-                <Link href={'/telegram'} className="flex items-center gap-2 text-base text-black underline transition duration-300">
+                <Link href={'/telegram'} className="hover:text-orange-800 flex items-center gap-2 text-base text-black underline transition duration-500">
                   <Send className="text-xl" />
                   Let's Talk on Telegram
                 </Link>
                 {/* Twitter */}
-                <Link href={'/twitter'} className="flex items-center gap-2 text-base text-black underline transition duration-300">
+                <Link href={'/twitter'} className=" hover:text-orange-800 flex items-center gap-2 text-base text-black underline transition duration-500">
                   <Twitter className="text-xl" />
                   Message us on X
                 </Link>
                 {/* Instagram */}
-                <Link href={'/instagram'} className="flex items-center gap-2 text-base text-black underline transition duration-300">
+                <Link href={'/instagram'} className="hover:text-orange-800 flex items-center gap-2 text-base text-black underline transition duration-500">
                   <Instagram className="text-xl" />
                   See us on Instagram
                 </Link>
@@ -256,17 +206,17 @@ export default function Contact() {
 
             {/* Call Information Section */}
             <div className="">
-              <h3 className="text-2xl font-semibold text-black">Call Us</h3>
+              <h3 className=" text-2xl font-semibold text-black">Call Us</h3>
               <h4 className="text-sm text-gray-400">Call our team from 8 am to 5 pm</h4>
               <div className="my-4 space-y-2">
                 {/* Phone */}
-                <Link href={'tel:+251913173163'} className="flex items-center gap-2 text-base text-black underline transition duration-300">
-                  <Phone className="text-xl" />
+                <Link href={'tel:+251913173163'} className="hover:text-orange-800 flex items-center gap-2 text-base text-black underline transition duration-500">
+                  <PhoneCallIcon className="text-xl" />
                   +251-913-173-163
                 </Link>
                 {/* Phone */}
-                <Link href={'tel:+251963190191'} className="flex items-center gap-2 text-base text-black underline  transition duration-300">
-                  <Phone className="text-xl" />
+                <Link href={'tel:+251963190191'} className="hover:text-orange-800 flex items-center gap-2 text-base text-black underline  transition duration-500">
+                  <PhoneCallIcon className="text-xl" />
                   +251-963-190-191
                 </Link>
               </div>
