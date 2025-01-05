@@ -25,11 +25,11 @@ const Hero = () => {
 
         {/* Header Title and Subtitle */}
         {/* shadow-[4px_4px_1px_#6F2C1F] */}
-        <div className="shadow-[4px_4px_1px_#6F2C1F] hover:rotate-[-2deg] transform duration-500 ease-in-out max-w-2xl text-start md:text-left bg-orange-100 bg-opacity-50 px-3 border border-white rounded-xl py-1 rotate-2">
-          <h1 className="text-5xl  py-6 uppercase font-bold tracking-wide text-orange-950">
+        <div className="shadow-[4px_4px_1px_#6F2C1F]  hover:rotate-[-2deg] transform duration-500 ease-in-out max-w-2xl text-start md:text-left bg-orange-100 bg-opacity-50 px-3 border border-white rounded-xl py-1 rotate-2">
+          <h1 className="text-3xl sm:text-5xl py-6 uppercase font-bold tracking-wide text-orange-950">
             Innovating Tomorrow, One Idea at a Time
           </h1>
-          <h3 className="mt-4 text-xl font-extralight font-[Lato] lowercase text-gray-700">
+          <h3 className="mt-4 text-lg sm:text-xl font-extralight font-[Lato] lowercase text-gray-700">
             Dive into the world of groundbreaking technologies, startup journeys, coding secrets,
             lifestyle hacks, and fascinating fun facts — where innovation meets inspiration.
           </h3>

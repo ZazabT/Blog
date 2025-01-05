@@ -32,7 +32,7 @@ const BlogDetails = async ({ params }: { params: { id: string } }) => {
     return (
       <div className="max-w-3xl mx-auto my-10 p-8">
         {/* Back icon - Fixed and responsive */}
-        <div className="fixed top-42 left-40 z-10">
+        <div className="fixed top-25 left-0 sm:top-42 sm:left-40  z-10">
           <Link href="/" passHref>
             <div className="flex items-center text-orange-950 border hover:border-white border-orange-950 rounded-full   transition duration-500">
               <ArrowLeft className="w-6 h-6 sm:w-8 sm:h-8" />
@@ -61,7 +61,7 @@ const BlogDetails = async ({ params }: { params: { id: string } }) => {
         </h1>
 
         {/* Image */}
-        <div className="relative w-full h-96 overflow-hidden mb-8 rounded-2xl hover:scale-105 hover:shadow-xl hover:opacity-90 hover:bg-black transition-all ease-in-out duration-500">
+        <div className="relative w-full h-96 overflow-hidden mb-8 rounded-2xl hover:scale-105 hover:opacity-90 hover:bg-black/10 transition-all ease-in-out duration-500 hover:shadow-xl">
           <Image
             src={blog.image}
             alt={blog.title}
