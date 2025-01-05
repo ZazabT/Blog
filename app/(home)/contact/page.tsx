@@ -1,4 +1,6 @@
 // pages/contact.js
+'use client'
+
 import React from "react";
 import { Send, Twitter, Instagram, Phone, MapPin } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -15,7 +17,7 @@ export default function Contact() {
   const [message , setMessage] = useState('');
 
   return (
-    <div className="min-h-screen mt-10 flex items-center justify-center px-6 py-12 mx-auto">
+    <div className="min-h-screen mt-10 flex items-center justify-center px-6 py-12 mx-auto  max-w-5xl">
       <div className="w-full max-w-7xl mx-auto overflow-hidden">
         {/* Header Section */}
         <div className="text-center max-w-4xl mx-auto">
@@ -102,6 +104,8 @@ export default function Contact() {
                   type="tel"
                   id="phone"
                   name="phone"
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(Number(e.target.value))}
                   className="w-full border-gray-300 rounded-lg shadow-sm focus:ring-orange-200 focus:border-orange-200 py-3 px-4 text-gray-700 placeholder-gray-400"
                   placeholder="+251 912 345 678"
                   pattern="\+?\d{1,4}\s?\d{3}\s?\d{3}\s?\d{3}"
