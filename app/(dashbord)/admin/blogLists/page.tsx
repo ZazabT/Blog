@@ -1,8 +1,8 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import {X} from 'lucide-react'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { X } from 'lucide-react';
 
 export default function BlogLists() {
   const [blogs, setBlogs] = useState([]);
@@ -38,22 +38,22 @@ export default function BlogLists() {
       </div>
     );
   }
-  
+
   if (error) return <div className="text-red-700 w-full items-center bg-red-200 px-4 py-2">{error}</div>;
 
   return (
     <div className="flex-1 pt-5 sm:pt-12 sm:pl-15">
       {/* Title */}
-      <h1 className="text-3xl font-bold mb-6 items-center flex justify-center ">All Blogs</h1>
+      <h1 className="text-3xl font-bold mb-6 items-center flex justify-center">All Blogs</h1>
 
       {/* Table Section */}
       <div className="overflow-x-auto">
-        <table className="w-full text-sm text-gray-500 border-separate border-spacing-0">
-          <thead className="text-sm text-black bg-gray-100 uppercase">
+        <table className="w-full text-sm text-gray-500 border-collapse border border-gray-200">
+          <thead className="text-sm text-black bg-gray-100 uppercase border-b border-gray-200">
             <tr>
-              <th scope="col" className="px-6 py-3 hidden sm:block text-left">ID</th>
-              <th scope="col" className="px-6 py-3 text-left">Blog Title</th>
-              <th scope="col" className="px-6 py-3 text-left">Created At</th>
+              <th scope="col" className="px-6 py-3 hidden sm:block text-left border-r border-gray-200">No</th>
+              <th scope="col" className="px-6 py-3 text-left border-r border-gray-200">Blog Title</th>
+              <th scope="col" className="px-6 py-3 text-left border-r border-gray-200">Created At</th>
               <th scope="col" className="px-6 py-3 text-left">Actions</th>
             </tr>
           </thead>
@@ -69,10 +69,10 @@ export default function BlogLists() {
               </tr>
             ) : blogs.length > 0 ? (
               blogs.map((blog, index) => (
-                <tr key={blog._id} className="border-b transition-colors hover:bg-gray-50">
-                  <td className="px-6 py-4 text-center hidden sm:block">{index + 1}</td>
-                  <td className="px-6 py-4">{blog.title}</td>
-                  <td className="px-6 py-4">
+                <tr key={blog._id} className="border-b border-gray-200 transition-colors hover:bg-gray-50">
+                  <td className="px-6 py-4 text-center hidden sm:block border-r border-gray-200">{index + 1}</td>
+                  <td className="px-6 py-4 border-r border-gray-200">{blog.title}</td>
+                  <td className="px-6 py-4 border-r border-gray-200">
                     {new Date(blog.createdAt).toLocaleDateString('en-US', {
                       weekday: 'short',  // Mon, Tue, etc.
                       month: 'short',    // Jan, Feb, etc.
@@ -95,8 +95,6 @@ export default function BlogLists() {
           </tbody>
         </table>
       </div>
-
-
     </div>
   );
 }
