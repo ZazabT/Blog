@@ -1,8 +1,6 @@
-import React from 'react';
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import React from 'react'
 import Link from 'next/link';
-
+import SubscrinberInput from '@/components/subscribeInput';
 const Navbar = () => {
   return (
     <nav className="font-[var(--font-geist-sans)] flex justify-between items-center px-6 py-6 bg-transparent w-full">
@@ -35,9 +33,8 @@ const Navbar = () => {
       {/* Auth Buttons and Search */}
       <div className="items-center gap-4 hidden md:flex shadow-[-7px_7px_0px_#6F2C1F]">
         {/* Subscribe Button */}
-        <div className="flex w-full max-w-sm items-center ">
-            <Input type="email" placeholder="Email" className='border rounded-none' />
-            <Button type="submit" className='border rounded-none hover:bg-orange-900 bg-orange-950' >Subscribe</Button>
+        <div>
+            <SubscrinberInput/>
         </div>
       </div>
     </nav>

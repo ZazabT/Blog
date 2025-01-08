@@ -30,7 +30,7 @@ const BlogDetails = async ({ params }: { params: { id: string } }) => {
     }
 
     return (
-      <div className="max-w-3xl mx-auto my-10 p-8">
+      <div className="max-w-3xl mx-auto my-5 p-8">
         {/* Back icon - Fixed and responsive */}
         <div className="fixed top-25 left-0 sm:top-42 sm:left-40  z-10">
           <Link href="/" passHref>

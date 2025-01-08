@@ -1,8 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import SubscribeInput from './subscribeInput';
 
 
 const Footer = () => {
@@ -36,9 +35,8 @@ const Footer = () => {
           </div>
 
           {/* Subscribe Section */}
-          <div className="flex w-full max-w-sm items-center">
-            <Input type="email" placeholder="Enter your email" className='border rounded-none' aria-label="Email Address" />
-            <Button type="submit" className='border rounded-none hover:bg-orange-900 bg-orange-950'>Subscribe</Button>
+          <div>
+            <SubscribeInput/>
           </div>
         </div>
 
